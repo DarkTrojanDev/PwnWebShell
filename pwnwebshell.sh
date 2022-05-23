@@ -39,7 +39,7 @@ else
   tput cnorm;exit 1
 fi
 
-#interactive console
+#run terminal
 tput cnorm;while [ "$cmd" != "exit" ]
 do
   printf "\e[1;31mpwnshell\e[1;37m:~$\e[1;32m " && read -r cmd
