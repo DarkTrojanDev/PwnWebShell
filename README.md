@@ -9,7 +9,7 @@ All we need, is to upload to the committed server a PHP structure like the follo
 ?>
 ```
 
-After that specify the url where our .php file is located in the script variable called url_webshell, example url_webshell="https://example.com/shell.php"
+After that specify the url where the .php file is located in the script variable called url_webshell, example url_webshell="https://example.com/shell.php"
 
 **Requirements - curl tor proxychains rlwrap**
 
