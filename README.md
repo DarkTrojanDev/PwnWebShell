@@ -13,7 +13,7 @@ After that specify the url where the .php file is located in the script variable
 
 ![demo](https://raw.githubusercontent.com/DarkTrojanDev/PwnWebShell/main/img/url_example.png)
 
-You can configure the reverse shell, specify your IP address and the listening port with netcat.
+You can configure the reverse shell, specify your IP address and the port on netcat listening.
 
 ![demo](https://raw.githubusercontent.com/DarkTrojanDev/PwnWebShell/main/img/reverse.png)
 
