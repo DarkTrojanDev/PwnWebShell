@@ -11,6 +11,8 @@ All we need, is to upload to the committed server a PHP structure like the follo
 
 After that specify the url where the .php file is located in the script variable called url_webshell, example url_webshell="https://example.com/shell.php"
 
+![demo](https://raw.githubusercontent.com/DarkTrojanDev/PwnWebShell/main/img/url_example.png)
+
 **Requirements - curl tor proxychains rlwrap**
 
 `sudo apt install curl tor proxychains-ng rlwrap -y`
