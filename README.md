@@ -23,7 +23,7 @@ All we need, is to upload to the committed server a PHP structure like the follo
 
 2. `chmod +x pwnwebshell.sh`
 
-
-3. `sudo rlwrap ./pwnwebshell.sh`
-  
+<details><summary>Execution</summary>
+	
+1. `sudo rlwrap ./pwnwebshell.sh`
 
