@@ -5,7 +5,7 @@ Tool to facilitate the management of our webshell from a terminal.
 
 `sudo apt install curl tor proxychains-ng rlwrap -y`
 
-<details><summary>Installation and Use</summary>
+<details><summary>Installation</summary>
 
   
 1. `git clone https://github.com/DarkTrojanDev/PwnWebShell.git`
