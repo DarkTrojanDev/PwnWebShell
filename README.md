@@ -2,6 +2,7 @@
 Tool to facilitate the management of our webshell from a terminal.
 
 **Requirements - curl tor proxychains rlwrap**
+
 `sudo apt install curl tor proxychains-ng rlwrap -y`
 
 <details><summary>Installation and Use</summary>
