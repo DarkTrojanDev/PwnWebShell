@@ -15,7 +15,7 @@ All we need, is to upload to the committed server a PHP structure like the follo
 
 `sudo apt install curl tor proxychains-ng rlwrap -y`
 
-<details><summary>Installation</summary>
+**Installation**
 
   
 1. `git clone https://github.com/DarkTrojanDev/PwnWebShell.git`
