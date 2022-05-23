@@ -1,5 +1,5 @@
 #!/bin/bash
-#Tool to facilitate the management of our webshell from a terminal, passing all traffic via Tor. (Kali/Parrot)
+#Tool to facilitate the management of our webshell from a terminal, passing all traffic via Tor.  (Kali/Parrot)
 #if you want to have an interactive console, use rlwrap
 #example sudo rlwrap ./pwnwebshell.sh
 #Created by F@br1x
