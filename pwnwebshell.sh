@@ -3,6 +3,7 @@
 #if you want to have an interactive console, use rlwrap
 #example sudo rlwrap ./pwnwebshell.sh
 #Created by F@br1x
+#Date: lun 23 may 2022
 
 #here you must place the complete link where your php file is located in your web server committed
 url_webshell="" #change this, example: https://example.com/shell.php
